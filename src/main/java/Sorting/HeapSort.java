@@ -31,8 +31,8 @@ public class HeapSort {
     public void sink(int a) {
         while (2*a <= N) {
             int b = a * 2;
-            if (compareArray(b, b+1)) b++;
-            if (!compareArray(a,b)) break;
+            if (compareArray(tempArray[b], tempArray[b+1])) b++;
+            if (!compareArray(tempArray[a],tempArray[b])) break;
             switchPlaces(a,b);
             a=b;
         }
